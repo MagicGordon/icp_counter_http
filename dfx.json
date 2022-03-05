@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "dfx": "0.8.4",
+  "canisters": {
+    "icp_counter_http": {
+      "type": "motoko",
+      "main": "src/icp_counter_http/main.mo"
+    },
+    "icp_counter_http_assets": {
+      "type": "assets",
+      "source": [
+        "src/icp_counter_http_assets/assets"
+      ],
+      "dependencies": [
+        "icp_counter_http"
+      ]
+    }
+  },
+  "defaults": {
+    "build": {
+      "packtool": "",
+      "args": ""
+    }
+  },
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  }
+}
